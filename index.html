@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Opening Envelope with HTML & css</title>
+    </head>
+    
+    <body>
+        <div class="letter-image">
+            <div class="animated-mail">
+                
+                <div class="back-fold"></div>
+                <div class="letter_img">
+
+                </div>
+                <img src="wither-rose.png" class="img" >
+                <div class="letter">
+                    <div class="letter-context-body">
+                        <p><strong>Dear,<br> Khao Oak</strong><br>  happy valentine's day</p>
+                        
+                    </div>
+                    <div class="letter-stamp">
+                        
+                        <div class="letter-stamp-inner">
+                            <div class="heart" style="width: 80px;--c: pink"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="top-fold"></div>
+                <div class="body"></div>
+                <div class="left-fold"></div>
+            </div>
+
+        </div>
+        <div class="turntable" id="record">
+            <div class="center-label">
+                <img src="sddefault.jpg" alt="Album Cover">
+            </div>
+        </div>
+    
+        <audio id="audio" controls class="audio" autoplay>
+            <source src="[THAISUB] Glue Song - beabadoobee.mp3" type="audio/mpeg">
+
+        </audio>
+    
+        <script>
+            const audio = document.getElementById("audio");
+            const record = document.getElementById("record");
+        
+            // เมื่อคลิกที่ turntable, ถ้า audio ไม่ได้เล่นอยู่จะให้มันเล่น
+            record.addEventListener("click", () => {
+                if (audio.paused) {
+                    audio.play(); // เล่นเพลง
+                } else {
+                    audio.pause(); // หยุดเพลง
+                }
+            });
+        
+            // เมื่อเพลงเล่น, เพิ่ม class spinning
+            audio.addEventListener("play", () => {
+                record.classList.add("spinning");
+            });
+        
+            // เมื่อเพลงหยุด, เอา class spinning ออก
+            audio.addEventListener("pause", () => {
+                record.classList.remove("spinning");
+            });
+        </script>
+
+
+    
+    </body>
+    
+    </html>

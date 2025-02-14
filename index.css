@@ -1,0 +1,216 @@
+body {
+    background: linear-gradient(to top, #ffbef0, #ffeffd);
+    overflow: hidden;
+  }
+  .letter-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  
+  .animated-mail {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .animated-mail .body {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 150px 300px;
+    border-color: transparent transparent #fce0e0 transparent;
+    z-index: 4;
+  }
+  .animated-mail .top-fold {
+    position: absolute;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 150px 150px 0 150px;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    -moz-transform-origin: 50% 0%;
+    -moz-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    transform-origin: 50% 0%;
+    transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    border-color: #fff5f5 transparent transparent transparent;
+    z-index: 5;
+  }
+  .animated-mail .back-fold {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 150px;
+    background: #e5dede;
+    z-index: 0;
+  }
+  .animated-mail .left-fold {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 0 50px 300px;
+    border-color: transparent transparent transparent #ffd3d1;
+    z-index: 3;
+  }
+   .img{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    -webkit-transform: translate(20%, 40%) ;
+    -moz-transform: translate(20%,40%);
+    transform: translate(20%, 40%);
+    z-index: 2;
+    
+    -webkit-transition: 0.4s 0.2s;
+    -moz-transition: 0.4s 0.2s;
+    transition: 0.4s 0.2s;
+    
+  }
+  .animated-mail .letter {
+    left: 20px;
+    bottom: 0px;
+    position: absolute;
+    width: 260px;
+    height: 50px;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    overflow: hidden;
+    -webkit-transition: 0.4s 0.2s;
+    -moz-transition: 0.4s 0.2s;
+    transition: 0.4s 0.2s;
+  }
+  
+  .animated-mail .letter .letter-context {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 10px;
+    width: 20%;
+    background: #cb5a5e;
+    content: 'ram avtar';
+  }
+  .animated-mail .letter .letter-context-body {
+    margin-top: 10px;
+    margin-left: 5px;
+    /* height: 10px; */
+    width: 99%;
+    color: rgb(234, 124, 124);
+    content: 'ram avtar';
+  }
+  .animated-mail .letter .letter-stamp {
+    margin-top: 10px;
+    margin-left: 90px;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    background: #cb5a5e00;
+    opacity: 0.3;
+  }
+
+
+  .heart {
+    --c: red;
+    width: 200px;
+    aspect-ratio: 1;
+    background:
+     radial-gradient(circle at 60% 65%,var(--c) 64%,#0000 65%) top left/50% 50%,
+     radial-gradient(circle at 40% 65%,var(--c) 64%,#0000 65%) top right/50% 50%,
+     conic-gradient(from -45deg at 50% 85.5%,var(--c) 90deg,#0000 0) bottom/100% 50%;
+    background-repeat: no-repeat;
+  }
+  
+
+  
+  .letter-image:hover .animated-mail {
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+  }
+  .letter-image:hover .animated-mail .top-fold {
+    transition: transform 0.4s, z-index 0.2s;
+    transform: rotateX(180deg);
+    -webkit-transition: transform 0.4s, z-index 0.2s;
+    -webkit-transform: rotateX(180deg);
+    -moz-transition: transform 0.4s, z-index 0.2s;
+    -moz-transform: rotateX(180deg);
+    z-index: 0;
+  }
+
+  .letter-image:hover .animated-mail .img {
+    height: 100%;
+    -webkit-transform: translate(70%, -30%)rotate(20deg);
+    -moz-transform: translate(70%, -30%)rotate(20deg);
+    transform: translate(70%, -30%)rotate(20deg);
+    -webkit-transition: 0.4s 0.2s;
+    -moz-transition: 0.4s 0.2s;
+    transition: 0.4s 0.2s;
+    cursor: pointer;
+  }
+  .letter-image:hover .animated-mail .letter {
+    height: 280px;
+    content: 'ram avtar';
+    color: #000;
+  }
+
+
+  .turntable {
+    left: -10em;
+    margin-top: 35em;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #333 20%, black 80%);
+    border-radius: 50%;
+    border: 5px solid #555;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease-in-out;
+    transition: 0.4s 0.2s;
+}
+
+
+.center-label {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden; /* ให้รูปภาพอยู่ในกรอบวงกลม */
+}
+
+.center-label img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ปรับภาพให้เต็มวงกลม */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spinning {
+    animation: spin 3s linear infinite;
+}
+    .audio {
+        opacity: 0; /* ซ่อน audio โดยให้ opacity เป็น 0 */
+        pointer-events: none; /* ทำให้ไม่สามารถคลิกหรือกดได้ */
+        transition: opacity 0.5s ease; /* ใช้ transition */
+    }
+    .turntable:hover{
+        margin-left: 9em;
+        margin-top: 20em;
+    }
